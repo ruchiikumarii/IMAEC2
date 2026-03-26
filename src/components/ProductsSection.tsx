@@ -5,55 +5,55 @@ export default function ProductsSection() {
   const products = [
     {
       title: "Surface & Hospital Disinfectants",
-      desc: "WHO-GMP certified surface disinfectants for clinical environments.",
-      icon: <Shield size={28} className="text-blue-600" />,
-      bg: "bg-blue-50",
-      colSpan: "md:col-span-2"
+      desc: "Effective disinfection solutions designed for clinical and hospital environments, built for everyday safety and compliance.",
+      Icon: Shield,
+      colSpan: "md:col-span-2",
+      tone: "bg-[#f7fbf7]"
     },
     {
       title: "Hand Hygiene & Sanitization Products",
-      desc: "Alcohol-based sanitizers and hand wash solutions.",
-      icon: <Droplets size={28} className="text-green-600" />,
-      bg: "bg-green-50",
-      colSpan: "md:col-span-1"
+      desc: "Reliable hand hygiene solutions designed for everyday clinical and institutional safety.",
+      Icon: Droplets,
+      colSpan: "md:col-span-1",
+      tone: "bg-white"
     },
     {
       title: "Medical & Surgical Consumables",
-      desc: "Sterile consumables for surgical and clinical use.",
-      icon: <Syringe size={28} className="text-purple-600" />,
-      bg: "bg-purple-50",
-      colSpan: "md:col-span-1"
+      desc: "Dependable consumables engineered to support safe, consistent and efficient patient care.",
+      Icon: Syringe,
+      colSpan: "md:col-span-1",
+      tone: "bg-[#f9fbfa]"
     },
     {
       title: "Institutional Hygiene Solutions",
-      desc: "Bulk hygiene solutions for facilities and institutions.",
-      icon: <Building size={28} className="text-orange-600" />,
-      bg: "bg-orange-50",
-      colSpan: "md:col-span-1"
+      desc: "High-volume hygiene products tailored for institutions and managed facility environments.",
+      Icon: Building,
+      colSpan: "md:col-span-1",
+      tone: "bg-white"
     },
     {
       title: "Dialysis & Specialty Products",
-      desc: "Specialty products for renal care and dialysis support.",
-      icon: <Activity size={28} className="text-pink-600" />,
-      bg: "bg-pink-50",
-      colSpan: "md:col-span-1"
+      desc: "Specialty products supporting renal care and advanced treatment protocols with dependable quality.",
+      Icon: Activity,
+      colSpan: "md:col-span-1",
+      tone: "bg-[#f9fbfa]"
     }
   ];
 
   return (
     <section id="products" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between mb-14 gap-5">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-[#16a34a] text-sm font-semibold mb-6">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#f4f7f5] border border-green-100 text-[#16a34a] text-sm font-semibold mb-6">
               OUR PORTFOLIO
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0f1f3d]">
               Comprehensive Product Portfolio
             </h2>
           </div>
-          <button className="flex items-center justify-center bg-[#16a34a] hover:bg-green-700 text-white px-6 py-3 rounded-xl font-medium transition-colors w-fit whitespace-nowrap">
-            View Product Categories <ArrowRight size={18} className="ml-2" />
+          <button className="group flex items-center justify-center bg-[#16a34a] hover:bg-[#15803d] text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 w-fit whitespace-nowrap shadow-[0_8px_18px_rgba(22,163,74,0.16)] hover:-translate-y-0.5">
+            View Product Categories <ArrowRight size={16} className="ml-2 transition-transform duration-300 group-hover:translate-x-0.5" />
           </button>
         </div>
 
@@ -66,17 +66,22 @@ export default function ProductsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
-              className={`${product.bg} ${product.colSpan} min-h-[180px] rounded-3xl p-8 flex flex-col justify-between group cursor-pointer transition-all duration-300 ease-in-out hover:shadow-lg`}
+              className={`${product.colSpan} ${product.tone} min-h-[180px] rounded-[20px] p-8 flex flex-col justify-between group cursor-pointer transition-all duration-300 ease-in-out border border-gray-100 shadow-sm hover:border-green-300 hover:shadow-lg hover:-translate-y-[6px]`}
             >
-              <div className="bg-white/60 w-14 h-14 rounded-2xl flex items-center justify-center backdrop-blur-sm shadow-sm group-hover:scale-110 transition-transform">
-                {product.icon}
+              {index === 0 && (
+                <div className="absolute top-5 right-5 w-8 h-8 rounded-full border border-[#16a34a]/20 bg-white/80 flex items-center justify-center">
+                  <ArrowRight size={14} className="text-[#16a34a]" />
+                </div>
+              )}
+
+              <div className="bg-[#f4f7f5] w-14 h-14 rounded-2xl flex items-center justify-center shadow-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-[#16a34a]">
+                <product.Icon size={30} className="text-[#16a34a] transition-colors duration-300 group-hover:text-white" />
               </div>
               <div className="mt-4">
-                <h3 className="text-xl font-bold text-[#0f1f3d] pr-4 mb-2">
+                <h3 className={`font-bold text-[#0f1f3d] pr-4 mb-2 ${index === 0 ? 'text-2xl' : 'text-xl'}`}>
                   {product.title}
                 </h3>
-                <p className="text-[#64748b] text-sm leading-relaxed">
+                <p className={`text-[#64748b] text-sm leading-relaxed ${index === 0 ? '[display:-webkit-box] [-webkit-line-clamp:2] [-webkit-box-orient:vertical] overflow-hidden' : ''}`}>
                   {product.desc}
                 </p>
               </div>

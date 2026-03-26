@@ -2,25 +2,23 @@ import { CheckCircle2 } from 'lucide-react';
 
 export default function TrustBar() {
   const items = [
-    "WHO-GMP Compliant",
-    "ISO Certified Manufacturing",
-    "Global Export Presence",
-    "High-Capacity Production Facilities"
+    'WHO-GMP Compliant',
+    'ISO 9001:2015 Certified',
+    'Global Export Presence',
+    'High-Capacity Production',
   ];
 
-  // Duplicate items to create seamless loop
-  const marqueeItems = [...items, ...items, ...items];
-
   return (
-    <div className="bg-[#f0fdf4] border-y border-green-200 py-4 overflow-hidden flex relative">
-      <div className="flex whitespace-nowrap animate-[marquee_25s_linear_infinite] min-w-full">
-        {marqueeItems.map((item, index) => (
-          <div key={index} className="flex items-center mx-8">
-            <CheckCircle2 size={18} className="text-[#16a34a] mr-2 flex-shrink-0" />
-            <span className="text-[#0f1f3d] font-medium text-sm md:text-base">{item}</span>
-            <div className="w-1.5 h-1.5 rounded-full bg-[#16a34a] ml-16 opacity-50"></div>
-          </div>
-        ))}
+    <div className="py-6 border-y border-gray-100 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-3 gap-x-8 place-items-center">
+          {items.map((item) => (
+            <div key={item} className="flex items-center justify-center text-center text-[#0f1f3d] min-w-0">
+              <CheckCircle2 size={14} className="text-[#16a34a] mr-2 flex-shrink-0" />
+              <span className="text-sm md:text-[15px] font-normal tracking-[0.01em] text-[#334155]">{item}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

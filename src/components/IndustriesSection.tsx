@@ -4,37 +4,37 @@ import { Hospital, FlaskConical, Building2, Hotel, Globe2 } from 'lucide-react';
 export default function IndustriesSection() {
   const industries = [
     { 
-      icon: <Hospital size={32} className="text-[#3b82f6]" />, 
-      title: "Hospitals & Healthcare Facilities",
-      desc: "Supplying clinical-grade disinfectants and consumables to hospitals and healthcare networks."
+      Icon: Hospital,
+      title: "Hospitals",
+      desc: "Supporting hospitals with reliable disinfectants and medical consumables to ensure safe and consistent patient care."
     },
     { 
-      icon: <FlaskConical size={32} className="text-[#16a34a]" />, 
+      Icon: FlaskConical,
       title: "Pharmaceutical Companies",
-      desc: "Contract manufacturing and hygiene solutions for pharma brands and formulators."
+      desc: "Partnering with pharmaceutical companies for scalable, compliant and high-quality manufacturing solutions."
     },
     { 
-      icon: <Building2 size={32} className="text-[#f97316]" />, 
-      title: "Facility Management Companies",
-      desc: "Institutional hygiene products for large-scale facility operations."
+      Icon: Building2,
+      title: "Facility Management",
+      desc: "Providing institutional hygiene solutions designed for efficient and large-scale facility management."
     },
     { 
-      icon: <Hotel size={32} className="text-purple-500" />, 
-      title: "Hospitality & Commercial Spaces",
-      desc: "Premium hygiene solutions for hotels, offices and commercial establishments."
+      Icon: Hotel,
+      title: "Hospitality",
+      desc: "Delivering premium hygiene solutions for hotels, offices and commercial environments."
     },
     { 
-      icon: <Globe2 size={32} className="text-pink-500" />, 
-      title: "Distributors & Global Markets",
-      desc: "Reliable bulk supply partnerships for distributors across domestic and international markets."
+      Icon: Globe2,
+      title: "Distributors",
+      desc: "Enabling distributors with reliable supply partnerships across domestic and global markets."
     }
   ];
 
   return (
-    <section id="industries" className="py-24 bg-[#f0fdf4]">
+    <section id="industries" className="py-24 bg-[#fbfdfb]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-[#16a34a] text-sm font-semibold mb-6">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-white border border-green-100 text-[#16a34a] text-sm font-semibold mb-6">
             WHO WE SERVE
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0f1f3d] mb-6">
@@ -45,7 +45,7 @@ export default function IndustriesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-7">
           {industries.map((ind, index) => (
             <motion.div
               key={index}
@@ -53,10 +53,10 @@ export default function IndustriesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/60 hover:bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg border-t-[3px] border-transparent hover:border-[#16a34a] hover:-translate-y-[6px] transition-all duration-300 ease-in-out flex flex-col justify-between items-center text-center group min-h-[220px]"
+              className={`${index % 2 === 0 ? 'bg-[#f9fbf9]' : 'bg-white'} rounded-[20px] p-7 shadow-sm hover:shadow-lg border border-gray-100 hover:border-green-300 hover:-translate-y-[6px] transition-all duration-300 ease-in-out flex flex-col justify-between items-center text-center group min-h-[242px]`}
             >
-              <div className="mb-4 p-4 bg-white rounded-full group-hover:scale-110 transition-transform duration-300 shadow-sm">
-                {ind.icon}
+              <div className="mb-5 p-4 bg-[#eaf5ed] rounded-full group-hover:scale-110 group-hover:bg-[#16a34a] transition-all duration-300 shadow-sm">
+                <ind.Icon size={32} className="text-[#166534] transition-colors duration-300 group-hover:text-white" />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-[#0f1f3d] leading-snug mb-2">

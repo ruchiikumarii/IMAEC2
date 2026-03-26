@@ -34,7 +34,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <a
                 key={link}
-                href={`#${link.toLowerCase().replace(' ', '-')}`}
+                href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
                 className="text-[#0f1f3d] hover:text-[#16a34a] font-medium text-sm transition-colors relative group"
               >
                 {link}
@@ -45,7 +45,7 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center">
-            <button className="bg-[#16a34a] hover:bg-green-700 text-white px-6 py-2.5 rounded-lg font-medium transition-colors shadow-sm">
+            <button className="bg-[#16a34a] hover:bg-green-700 text-white px-6 py-2.5 rounded-xl font-medium transition-colors shadow-sm">
               Get in Touch
             </button>
           </div>
@@ -74,7 +74,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <a
                 key={link}
-                href={`#${link.toLowerCase().replace(' ', '-')}`}
+                href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
                 className="block px-3 py-3 text-base font-medium text-[#0f1f3d] hover:text-[#16a34a] hover:bg-gray-50 rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >

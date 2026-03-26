@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Building2, Home, Hospital, ArrowRight, Download, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 
 export default function HeroSection() {
   const containerVariants = {
@@ -13,7 +13,7 @@ export default function HeroSection() {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
-  };
+  } as const;
 
   return (
     <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden bg-white">
@@ -28,7 +28,7 @@ export default function HeroSection() {
       <div 
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(to right, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 35%, rgba(255,255,255,0.6) 55%, rgba(255,255,255,0.0) 100%)'
+          background: 'linear-gradient(to right, rgba(255,255,255,0.44) 0%, rgba(255,255,255,0.4) 30%, rgba(255,255,255,0.24) 52%, rgba(255,255,255,0.05) 100%)'
         }}
       ></div>
 
@@ -40,29 +40,26 @@ export default function HeroSection() {
           animate="visible"
           className="max-w-2xl lg:max-w-[50%]"
         >
-          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0f1f3d] leading-tight mb-6">
+          <motion.h1
+            variants={itemVariants}
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0f1f3d] leading-tight mb-6"
+            style={{ textShadow: '0 1px 10px rgba(255,255,255,0.28)' }}
+          >
             India's Trusted Partner for Pharmaceutical & Hygiene Manufacturing
           </motion.h1>
 
           <motion.p variants={itemVariants} className="text-lg text-[#64748b] mb-8 leading-relaxed">
-            From disinfectants to medical consumables, IMAEC delivers high-quality, compliant and scalable manufacturing solutions for healthcare, institutional and global markets.
+            Delivering safe, high-quality solutions that protect lives — across hospitals, homes and essential industries.
           </motion.p>
 
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 mb-10">
-            <button className="flex items-center justify-center bg-[#16a34a] hover:bg-green-700 text-white px-8 py-3.5 rounded-xl font-medium transition-all shadow-lg shadow-green-200">
+            <button className="flex items-center justify-center bg-[#16a34a] hover:bg-[#15803d] text-white px-8 py-3.5 rounded-2xl font-medium transition-all duration-300 ease-out shadow-[0_8px_20px_rgba(22,163,74,0.18)] hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(22,163,74,0.24)]">
               Request Business Enquiry <ArrowRight size={18} className="ml-2" />
             </button>
-            <button className="flex items-center justify-center border-2 border-[#0f1f3d] text-[#0f1f3d] hover:bg-gray-50 px-8 py-3.5 rounded-xl font-medium transition-all">
+            <button className="flex items-center justify-center border border-[#0f1f3d]/70 bg-white/20 text-[#0f1f3d] hover:bg-white/45 px-8 py-3.5 rounded-2xl font-medium transition-all duration-300 ease-out hover:-translate-y-0.5">
               Download Company Profile <Download size={18} className="ml-2" />
             </button>
-          </motion.div>
-
-          {/* Trust Row */}
-          <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-6 text-sm font-medium text-[#0f1f3d]">
-            <div className="flex items-center"><CheckCircle2 size={16} className="text-[#16a34a] mr-1.5" /> WHO-GMP Certified</div>
-            <div className="flex items-center"><CheckCircle2 size={16} className="text-[#16a34a] mr-1.5" /> ISO 9001:2015</div>
-            <div className="flex items-center"><CheckCircle2 size={16} className="text-[#16a34a] mr-1.5" /> Global Export</div>
           </motion.div>
         </motion.div>
       </div>
