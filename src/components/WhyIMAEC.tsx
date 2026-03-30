@@ -47,7 +47,7 @@ export default function WhyIMAEC() {
     <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#f4f7f5] border border-green-100 text-[#16a34a] text-sm font-semibold mb-6">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#f0faf0] border border-green-200 text-[#166534] text-sm font-semibold mb-6">
             OUR EDGE
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0f1f3d]">
@@ -66,9 +66,9 @@ export default function WhyIMAEC() {
             <motion.div
               key={index}
               variants={itemVariants}
-              className={`flex-1 rounded-[20px] p-6 border border-gray-100 shadow-sm hover:-translate-y-[6px] hover:shadow-lg hover:border-green-300 transition-all duration-300 ease-in-out group ${index === 1 ? 'bg-[#f8fcf8] border-t border-t-green-300' : 'bg-white'}`}
+              className={`flex-1 rounded-[20px] p-6 border border-gray-100 shadow-sm hover:-translate-y-[6px] hover:shadow-lg hover:border-green-200 transition-all duration-300 ease-in-out group ${index === 1 ? 'bg-[#f8faf8] border-t border-t-green-300' : 'bg-white'}`}
             >
-              <div className="mb-4 w-12 h-12 rounded-full bg-[#eaf5ed] flex items-center justify-center transition-all duration-300 group-hover:bg-[#16a34a]">
+              <div className="mb-4 w-12 h-12 rounded-full bg-[#e8f3ea] flex items-center justify-center transition-all duration-300 group-hover:bg-[#166534]">
                 <reason.Icon size={24} className="text-[#166534] transition-colors duration-300 group-hover:text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#0f1f3d] leading-snug">

@@ -14,7 +14,7 @@ export default function TrustBar() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-3 gap-x-8 place-items-center">
           {items.map((item) => (
             <div key={item} className="flex items-center justify-center text-center text-[#0f1f3d] min-w-0">
-              <CheckCircle2 size={14} className="text-[#16a34a] mr-2 flex-shrink-0" />
+              <CheckCircle2 size={14} className="text-[#166534] mr-2 flex-shrink-0" />
               <span className="text-sm md:text-[15px] font-normal tracking-[0.01em] text-[#334155]">{item}</span>
             </div>
           ))}

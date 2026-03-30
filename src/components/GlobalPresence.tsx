@@ -47,7 +47,7 @@ export default function GlobalPresence() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-[#16a34a] text-sm font-semibold mb-6">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#f0faf0] text-[#166534] text-sm font-semibold mb-6 border border-green-200">
             OUR REACH
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0f1f3d] mb-6">
@@ -101,11 +101,11 @@ export default function GlobalPresence() {
                   <div
                     className={`relative rounded-full cursor-pointer ${name === 'India' ? 'w-[18px] h-[18px]' : 'w-4 h-4'}`}
                   >
-                    <div className={`absolute inset-0 rounded-full bg-[#16a34a]/10 ${name === 'India' ? 'shadow-[0_0_0_3px_rgba(22,163,74,0.15)]' : 'shadow-[0_0_0_2px_rgba(22,163,74,0.12)]'}`}></div>
-                    <div className="absolute inset-[2px] rounded-full bg-[#16a34a]"></div>
+                    <div className={`absolute inset-0 rounded-full bg-[#166534]/10 ${name === 'India' ? 'shadow-[0_0_0_3px_rgba(22,101,52,0.15)]' : 'shadow-[0_0_0_2px_rgba(22,101,52,0.12)]'}`}></div>
+                    <div className="absolute inset-[2px] rounded-full bg-[#166534]"></div>
                     <div className={`absolute rounded-full bg-white ${name === 'India' ? 'inset-[6px]' : 'inset-[5px]'}`}></div>
-                    <div className="absolute inset-0 rounded-full bg-[#16a34a]/20 animate-ping-1" style={{ animationDelay: `${index * 0.16}s` }}></div>
-                    <div className="absolute inset-0 rounded-full bg-[#16a34a]/12 animate-ping-2" style={{ animationDelay: `${(index * 0.16) + 1}s` }}></div>
+                    <div className="absolute inset-0 rounded-full bg-[#166534]/20 animate-ping-1" style={{ animationDelay: `${index * 0.16}s` }}></div>
+                    <div className="absolute inset-0 rounded-full bg-[#166534]/12 animate-ping-2" style={{ animationDelay: `${(index * 0.16) + 1}s` }}></div>
 
                     {hoveredLocation === name && (
                       <div 
@@ -141,29 +141,29 @@ export default function GlobalPresence() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mt-4"
         >
           <div className="relative text-center p-6 pt-7 bg-white rounded-[20px] border border-gray-100 shadow-[0_8px_22px_rgba(15,31,61,0.08)] hover:-translate-y-1 hover:border-green-200 hover:shadow-[0_14px_30px_rgba(15,31,61,0.13)] transition-all duration-300">
-            <div className="absolute top-0 left-0 right-0 h-1 rounded-t-[20px] bg-[#16a34a]/85"></div>
-            <div className="text-[2.65rem] font-extrabold text-[#16a34a] mb-2 leading-none">
+            <div className="absolute top-0 left-0 right-0 h-1 rounded-t-[20px] bg-[#166534]/85"></div>
+            <div className="text-[2.65rem] font-extrabold text-[#166534] mb-2 leading-none">
               {inView ? <CountUp end={20} duration={2.5} /> : '0'}+
             </div>
             <div className="text-sm font-medium text-[#0f1f3d]">Active global markets served</div>
           </div>
           <div className="relative text-center p-6 pt-7 bg-white rounded-[20px] border border-gray-100 shadow-[0_8px_22px_rgba(15,31,61,0.08)] hover:-translate-y-1 hover:border-green-200 hover:shadow-[0_14px_30px_rgba(15,31,61,0.13)] transition-all duration-300">
-            <div className="absolute top-0 left-0 right-0 h-1 rounded-t-[20px] bg-[#16a34a]/85"></div>
-            <div className="text-[2.65rem] font-extrabold text-[#16a34a] mb-2 leading-none">
+            <div className="absolute top-0 left-0 right-0 h-1 rounded-t-[20px] bg-[#166534]/85"></div>
+            <div className="text-[2.65rem] font-extrabold text-[#166534] mb-2 leading-none">
               {inView ? <CountUp end={500} duration={2.5} /> : '0'}+
             </div>
             <div className="text-sm font-medium text-[#0f1f3d]">Diverse product portfolio across healthcare and hygiene</div>
           </div>
           <div className="relative text-center p-6 pt-7 bg-white rounded-[20px] border border-gray-100 shadow-[0_8px_22px_rgba(15,31,61,0.08)] hover:-translate-y-1 hover:border-green-200 hover:shadow-[0_14px_30px_rgba(15,31,61,0.13)] transition-all duration-300">
-            <div className="absolute top-0 left-0 right-0 h-1 rounded-t-[20px] bg-[#16a34a]/85"></div>
-            <div className="text-[2.65rem] font-extrabold text-[#16a34a] mb-2 leading-none">
+            <div className="absolute top-0 left-0 right-0 h-1 rounded-t-[20px] bg-[#166534]/85"></div>
+            <div className="text-[2.65rem] font-extrabold text-[#166534] mb-2 leading-none">
               {inView ? <CountUp end={15} duration={2.5} /> : '0'}+
             </div>
             <div className="text-sm font-medium text-[#0f1f3d]">Proven manufacturing experience and industry expertise</div>
           </div>
           <div className="relative text-center p-6 pt-7 bg-white rounded-[20px] border border-gray-100 shadow-[0_8px_22px_rgba(15,31,61,0.08)] hover:-translate-y-1 hover:border-green-200 hover:shadow-[0_14px_30px_rgba(15,31,61,0.13)] transition-all duration-300 flex flex-col justify-center">
-            <div className="absolute top-0 left-0 right-0 h-1 rounded-t-[20px] bg-[#16a34a]/85"></div>
-            <div className="text-lg font-bold text-[#16a34a] mb-1 leading-tight">Global Export Presence</div>
+            <div className="absolute top-0 left-0 right-0 h-1 rounded-t-[20px] bg-[#166534]/85"></div>
+            <div className="text-lg font-bold text-[#166534] mb-1 leading-tight">Global Export Presence</div>
             <div className="text-sm font-medium text-[#0f1f3d]">Reliable supply network across international markets</div>
           </div>
         </motion.div>

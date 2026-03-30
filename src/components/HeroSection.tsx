@@ -24,11 +24,11 @@ export default function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
       
-      {/* OVERLAY */}
+      {/* OVERLAY - Soft gradient with professional tint */}
       <div 
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(to right, rgba(255,255,255,0.44) 0%, rgba(255,255,255,0.4) 30%, rgba(255,255,255,0.24) 52%, rgba(255,255,255,0.05) 100%)'
+          background: 'linear-gradient(to right, rgba(240,250,240,0.55) 0%, rgba(240,250,240,0.35) 25%, rgba(15,31,61,0.08) 50%, rgba(15,31,61,0.02) 100%)'
         }}
       ></div>
 
@@ -54,10 +54,10 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 mb-10">
-            <button className="flex items-center justify-center bg-[#16a34a] hover:bg-[#15803d] text-white px-8 py-3.5 rounded-2xl font-medium transition-all duration-300 ease-out shadow-[0_8px_20px_rgba(22,163,74,0.18)] hover:-translate-y-0.5 hover:shadow-[0_12px_26px_rgba(22,163,74,0.24)]">
+            <button className="flex items-center justify-center bg-[#166534] hover:bg-[#14532D] text-white px-8 py-3.5 rounded-2xl font-semibold transition-all duration-300 ease-out shadow-[0_10px_28px_rgba(22,101,52,0.35)] hover:-translate-y-1 hover:shadow-[0_14px_36px_rgba(22,101,52,0.42)] hover:scale-[1.03]">
               Request Business Enquiry <ArrowRight size={18} className="ml-2" />
             </button>
-            <button className="flex items-center justify-center border border-[#0f1f3d]/70 bg-white/20 text-[#0f1f3d] hover:bg-white/45 px-8 py-3.5 rounded-2xl font-medium transition-all duration-300 ease-out hover:-translate-y-0.5">
+            <button className="flex items-center justify-center border-2 border-[#166534] bg-white/20 text-[#0f1f3d] hover:bg-white/35 hover:border-[#14532D] px-8 py-3.5 rounded-2xl font-medium transition-all duration-300 ease-out hover:-translate-y-0.5">
               Download Company Profile <Download size={18} className="ml-2" />
             </button>
           </motion.div>

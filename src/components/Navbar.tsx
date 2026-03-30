@@ -35,17 +35,17 @@ export default function Navbar() {
               <a
                 key={link}
                 href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
-                className="text-[#0f1f3d] hover:text-[#16a34a] font-medium text-sm transition-colors relative group"
+                className="text-[#0f1f3d] hover:text-[#166534] font-medium text-sm transition-colors relative group"
               >
                 {link}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#16a34a] transition-all group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#166534] transition-all group-hover:w-full"></span>
               </a>
             ))}
           </nav>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center">
-            <button className="bg-[#16a34a] hover:bg-green-700 text-white px-6 py-2.5 rounded-xl font-medium transition-colors shadow-sm">
+            <button className="bg-[#166534] hover:bg-[#065f46] text-white px-6 py-2.5 rounded-xl font-medium transition-colors shadow-sm">
               Get in Touch
             </button>
           </div>
@@ -54,7 +54,7 @@ export default function Navbar() {
           <div className="flex md:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-[#0f1f3d] hover:text-[#16a34a] p-2"
+              className="text-[#0f1f3d] hover:text-[#166534] p-2"
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -75,14 +75,14 @@ export default function Navbar() {
               <a
                 key={link}
                 href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
-                className="block px-3 py-3 text-base font-medium text-[#0f1f3d] hover:text-[#16a34a] hover:bg-gray-50 rounded-md"
+                className="block px-3 py-3 text-base font-medium text-[#0f1f3d] hover:text-[#166534] hover:bg-gray-50 rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link}
               </a>
             ))}
             <div className="pt-4 px-3">
-              <button className="w-full bg-[#16a34a] text-white px-6 py-3 rounded-lg font-medium shadow-sm">
+              <button className="w-full bg-[#166534] text-white px-6 py-3 rounded-lg font-medium shadow-sm">
                 Get in Touch
               </button>
             </div>

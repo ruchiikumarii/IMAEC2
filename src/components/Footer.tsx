@@ -24,7 +24,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {['About Us', 'Capabilities', 'Products', 'Industries', 'Global Presence', 'Contact'].map((link) => (
                 <li key={link}>
-                  <a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} className="text-[#64748b] hover:text-[#16a34a] transition-colors text-sm">
+                  <a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`} className="text-[#64748b] hover:text-[#166534] transition-colors text-sm">
                     {link}
                   </a>
                 </li>
@@ -38,7 +38,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {['WHO-GMP Certified', 'ISO 9001:2015', 'ISO 13485', 'CE Marking'].map((cert) => (
                 <li key={cert} className="text-[#64748b] text-sm flex items-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#16a34a] mr-2"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#166534] mr-2"></span>
                   {cert}
                 </li>
               ))}
@@ -50,12 +50,12 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6 text-[#0f1f3d]">CONTACT</h4>
             <ul className="space-y-4">
               <li>
-                <a href="mailto:info@imaecpharma.com" className="text-[#64748b] hover:text-[#16a34a] transition-colors text-sm flex items-center">
+                <a href="mailto:info@imaecpharma.com" className="text-[#64748b] hover:text-[#166534] transition-colors text-sm flex items-center">
                   <Mail size={16} className="mr-3" /> info@imaecpharma.com
                 </a>
               </li>
               <li>
-                <a href="#" className="text-[#64748b] hover:text-[#16a34a] transition-colors text-sm flex items-center">
+                <a href="#" className="text-[#64748b] hover:text-[#166534] transition-colors text-sm flex items-center">
                   <Download size={16} className="mr-3" /> Download Company Profile
                 </a>
               </li>

@@ -15,7 +15,7 @@ export default function VideoSection() {
       `}</style>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#f4f7f5] border border-green-100 text-[#16a34a] text-sm font-semibold mb-6">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#f0faf0] border border-green-200 text-[#166534] text-sm font-semibold mb-6">
             OUR STORY
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0f1f3d] mb-6">
@@ -49,9 +49,9 @@ export default function VideoSection() {
           {/* Play Button */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative">
-              <div className="absolute inset-0 bg-[#16a34a]/35 rounded-full video-soft-pulse"></div>
-              <div className="absolute inset-0 bg-[#16a34a]/20 rounded-full video-soft-pulse" style={{ animationDelay: '1.1s' }}></div>
-              <div className="relative z-10 w-20 h-20 bg-[#16a34a] rounded-full flex items-center justify-center shadow-[0_10px_26px_rgba(15,31,61,0.22)] transform group-hover:scale-110 transition-transform duration-300">
+              <div className="absolute inset-0 bg-[#166534]/35 rounded-full video-soft-pulse"></div>
+              <div className="absolute inset-0 bg-[#166534]/20 rounded-full video-soft-pulse" style={{ animationDelay: '1.1s' }}></div>
+              <div className="relative z-10 w-20 h-20 bg-[#166534] rounded-full flex items-center justify-center shadow-[0_10px_26px_rgba(15,31,61,0.22)] transform group-hover:scale-110 transition-transform duration-300">
                 <Play size={32} className="text-white ml-2" fill="currentColor" />
               </div>
             </div>

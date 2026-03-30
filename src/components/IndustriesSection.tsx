@@ -31,10 +31,10 @@ export default function IndustriesSection() {
   ];
 
   return (
-    <section id="industries" className="py-24 bg-[#fbfdfb]">
+    <section id="industries" className="py-24 bg-[#fafbfa]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-white border border-green-100 text-[#16a34a] text-sm font-semibold mb-6">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#f0faf0] border border-green-200 text-[#166534] text-sm font-semibold mb-6">
             WHO WE SERVE
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-[#0f1f3d] mb-6">
@@ -53,9 +53,9 @@ export default function IndustriesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`${index % 2 === 0 ? 'bg-[#f9fbf9]' : 'bg-white'} rounded-[20px] p-7 shadow-sm hover:shadow-lg border border-gray-100 hover:border-green-300 hover:-translate-y-[6px] transition-all duration-300 ease-in-out flex flex-col justify-between items-center text-center group min-h-[242px]`}
+              className={`${index % 2 === 0 ? 'bg-[#f8faf8]' : 'bg-white'} rounded-[20px] p-7 shadow-sm hover:shadow-lg border border-gray-100 hover:border-green-200 hover:-translate-y-[6px] transition-all duration-300 ease-in-out flex flex-col justify-between items-center text-center group min-h-[242px]`}
             >
-              <div className="mb-5 p-4 bg-[#eaf5ed] rounded-full group-hover:scale-110 group-hover:bg-[#16a34a] transition-all duration-300 shadow-sm">
+              <div className="mb-5 p-4 bg-[#e8f3ea] rounded-full group-hover:scale-110 group-hover:bg-[#166534] transition-all duration-300 shadow-sm">
                 <ind.Icon size={32} className="text-[#166534] transition-colors duration-300 group-hover:text-white" />
               </div>
               <div>
