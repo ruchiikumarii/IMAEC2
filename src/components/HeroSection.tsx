@@ -2,6 +2,15 @@ import { motion } from 'motion/react';
 import { ArrowRight, Download } from 'lucide-react';
 
 export default function HeroSection() {
+  const baseButtonClass =
+    'group inline-flex items-center justify-center gap-2 h-14 px-8 sm:px-9 rounded-[12px] whitespace-nowrap font-semibold tracking-[0.005em] text-[1rem] transition-all duration-300 will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1929]';
+
+  const primaryButtonClass =
+    `${baseButtonClass} bg-gradient-to-r from-[#13824b] to-[#0f6f41] text-white shadow-[0_8px_20px_rgba(19,130,75,0.32)] hover:from-[#127744] hover:to-[#0d633a] hover:scale-105`;
+
+  const secondaryButtonClass =
+    `${baseButtonClass} bg-transparent text-white border-2 border-white/90 shadow-[0_0_0_1px_rgba(255,255,255,0.12)_inset] hover:border-white hover:bg-white/8`;
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -50,19 +59,19 @@ export default function HeroSection() {
 
           <motion.p
             variants={itemVariants}
-            className="text-[1.125rem] text-slate-100 mb-10 leading-[1.72] max-w-[58ch]"
+            className="text-[1.125rem] text-slate-100 leading-[1.72] max-w-[58ch]"
           >
             Delivering safe, high-quality solutions that protect lives — across hospitals, homes and essential industries.
           </motion.p>
 
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-5 mb-10">
-            <button className="group flex items-center justify-center min-h-[56px] bg-[#166534] hover:bg-[#14532D] text-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] shadow-[0_4px_12px_rgba(46,125,50,0.3),0_2px_4px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-[0_6px_16px_rgba(46,125,50,0.4)] will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/90 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1929]">
+          <motion.div variants={itemVariants} className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-10">
+            <button className={primaryButtonClass}>
               Request Business Enquiry
-              <ArrowRight size={18} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
             </button>
-            <button className="group flex items-center justify-center min-h-[56px] border-2 border-white/90 bg-white/10 backdrop-blur-[10px] text-white hover:bg-white/20 hover:border-white px-8 py-4 rounded-2xl font-semibold transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-[1.02] will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a1929]">
+            <button className={secondaryButtonClass}>
               Download Company Profile
-              <Download size={18} className="ml-2 transition-transform duration-300 group-hover:-translate-y-1" />
+              <Download size={18} className="transition-transform duration-300 group-hover:-translate-y-0.5" />
             </button>
           </motion.div>
         </motion.div>
